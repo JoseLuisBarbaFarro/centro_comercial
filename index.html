@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Comercial</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0"/>
+</head>
+<body onload="cargarApp()">
+
+    <form id='forma' onsubmit="return false;">
+        <div class="buscar">
+            <input type="text" class="buscar_texto entrada" placeholder="Escribe lo que buscas" id="busqueda" placeholder='Ingresa lo que buscas.'>
+            <a class="boton" onClick="enviarDato()">
+                <i class="icon-buscar"></i>
+            </a>
+        </div>
+        <div class=' seleccion agregar_valor'>
+            <p>Elige la categoría que buscas</p>
+            <select class='buscar_tipo' id='tipo' >
+                <option value='carnes'>Carnes</option>
+                <option value='electrodemosticos'>Electrodomesticos</option>
+                <option value='verduras'>Verduras</option>
+                <option value='ropas'>Ropas</option>
+                <option value='abarrotes' selected>Abarrotes</option>
+
+            </select>
+        </div>
+    </form>
+
+    <div class="contenedor limpiarEstilos">
+
+        <div class="producto">
+            <h2 class='producto_titulo'>Productos encontrados </h2>
+            <div id='lista-productos'>
+                <div class="elemento limpiarEstilos">
+                    <div class="elemento_descripcion">Laptop HP 250 G7 Core i5 1TB 8GB</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento_valor">
+                             <a href='www.google.com' class='Id'>1</a> 
+                             <p class='precio'>S/ 3700.00</p>
+                            <img src='recursos/abarrotes/Laptop HP 250 G7 Core i5 1TB 8GB.jpg' class="Imagen_producto" /> 
+                        </div>
+                        <div class="elemento_eliminar">
+                            <button class='elemento_eliminar--btn'>
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="elemento limpiarEstilos">
+                    <div class="elemento_descripcion">Televisor LG LED 65 UHD 4K Smart TV 65UN7100 (2020)</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento_valor">
+                             <a href='www.google.com' class='Id'>2</a> 
+                             <p class='precio'>S/ 2300.00</p>
+                            <img src='recursos/abarrotes/Televisor LG LED 65 UHD 4K Smart TV 65UN7100 (2020).jpg' class="Imagen_producto" /> 
+                        </div>
+                        <div class="elemento_eliminar">
+                            <button class='elemento_eliminar--btn'>
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src='producto.js'></script>
+    <script src='ropa.js'></script>
+    <script src='abarrote.js'></script>
+    <script src='carnes.js'></script>
+    <script src='verduras.js'></script>
+    <script src='electrodomesticos.js'></script>
+    <script src='buscar.js'></script>
+    <script src='app.js'></script>
+    
+</body>
+</html>
